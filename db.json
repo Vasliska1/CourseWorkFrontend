@@ -1,0 +1,77 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Краковская",
+      "price": 1200.0,
+      "quantity" : 1
+    },
+    {
+      "id": 2,
+      "name": "Таллинская",
+      "price": 1250.0,
+      "quantity" : 1
+    },
+    {
+      "id": 3,
+      "name": "Одесская",
+      "price": 1500.0,
+      "quantity" : 1
+    },
+    {
+      "id": 4,
+      "name": "Украинская",
+      "price": 1300.5,
+      "quantity" : 1
+    },
+    {
+      "id": 5,
+      "name": "Краковская",
+      "price": 1200.0,
+      "quantity" : 1
+    },
+    {
+      "id": 6,
+      "name": "Таллинская",
+      "price": 1250.0,
+      "quantity" : 1
+    },
+    {
+      "id": 7,
+      "name": "Одесская",
+      "price": 1500.0,
+      "quantity" : 1
+    },
+    {
+      "id": 8,
+      "name": "Украинская",
+      "price": 1300.5,
+      "quantity" : 1
+    }
+
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "provider_name": "Иван",
+      "factory_name": "Фактори 1",
+      "pay_status" : false,
+      "dept_status": false
+    },
+    {
+      "id": 1332,
+      "provider_name": "Диван",
+      "factory_name": "Фактори 2",
+      "pay_status" : true,
+      "dept_status": false
+    },
+    {
+      "id": 2596,
+      "provider_name": "Биван",
+      "factory_name": "Фактори 3",
+      "pay_status" : true,
+      "dept_status": true
+    }
+  ]
+
+}
