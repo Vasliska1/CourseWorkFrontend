@@ -9,6 +9,8 @@ import Register from "@/components/Auth/Register";
 import Register_city from "@/components/Auth/Register_city";
 import Register_district from "@/components/Auth/Register_district";
 import Register_end from "@/components/Auth/Register_end";
+import Thanks from "@/components/Main/Thanks";
+import Account from "@/components/Main/Account";
 
 Vue.use(Router);
 let router = new Router({
@@ -49,6 +51,18 @@ let router = new Router({
             path: '/basket',
             name: 'basket',
             component: Basket,
+
+        },
+        {
+            path: '/thanks',
+            name: 'thanks',
+            component: Thanks,
+
+        },
+        {
+            path: '/account',
+            name: 'account',
+            component: Account,
 
         },
         {

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="head">
         <div class=" logo">
-          <a href="main.html"><img src="../../assets/images/logo.png" alt=""></a>
+          <a><img src="../../assets/images/logo.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -45,6 +45,9 @@
               <ul class="nav navbar-nav nav_1">
                 <li><a class="color" @click.prevent="basketRoute" href="javascript:void(0);">Корзина</a></li>
               </ul>
+              <ul class="nav navbar-nav nav_1">
+                <li><a class="color" @click.prevent="accountRoute" href="javascript:void(0);">Личный кабинет</a></li>
+              </ul>
             </div>
           </nav>
         </div>
@@ -72,6 +75,9 @@ export default {
     basketRoute: function () {
 
       this.$router.push('/basket');
+    },
+    accountRoute(){
+      this.$router.push('/account');
     }
   }
 }

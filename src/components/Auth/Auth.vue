@@ -49,6 +49,7 @@
 import Header from "../Header";
 import Foother from "../Foother";
 import {login} from './Response'
+import Store from "@/vuex/store";
 
 export default {
   name: "Auth",
@@ -64,7 +65,8 @@ export default {
       errors: [],
       name: null,
       password: null,
-      repassword: null
+      repassword: null,
+      store: Store
     }
   },
   components: {Header, Foother},
@@ -94,6 +96,7 @@ export default {
           response.text().then(text => {
             localStorage.setItem("auth", text);
             localStorage.setItem("userName", this.name)
+            Store.restore()
             this.$router.push('/catalog')
           });
         } else
@@ -104,7 +107,7 @@ export default {
       this.$router.push('/register');
     }
   },mounted() {
-    localStorage.setItem('basket',null);
+    localStorage.setItem('basket','null');
   }
 }
 </script>

@@ -1,17 +1,21 @@
 @font-face {
     font-family: 'Oxygen-Bold';
+
 }
 
 @font-face {
     font-family: 'Ubuntu-Regular';
+
 }
 
 @font-face {
     font-family: 'Ubuntu-Bold';
+
 }
 
 @font-face {
     font-family: 'Oxygen-Regular';
+
 }
 
 html,
@@ -131,6 +135,7 @@ p {
     width: 17px;
     height: 17px;
     display: block;
+
     margin: 0 0.3em;
 }
 
@@ -151,6 +156,7 @@ p {
 }
 
 .header-social ul li a i:hover {
+
 }
 
 .header-social ul li a i.ic1:hover {
@@ -266,32 +272,10 @@ div#bs-megadropdown-tabs {
 .item_add {
     color: #000;
     border: none;
-
 }
 
 a.item_add {
     text-decoration: none;
-}
-.item_add button{
-
-    width: 25px;
-    height: 25px;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-
-}
-.item_add img{
-    width: 25px;
-    height: 25px;
-
-}
-.item_add span{
-
-    font-size: 30pt;
 }
 
 .grid_1 img {
@@ -804,6 +788,36 @@ h1 {
     margin-left: 90px;
     display: block;
     background: url(../images/back-login.png)no-repeat;
+    padding: 5em 0;
+}
+
+.banner-account {
+    text-align: center;
+    width: 90%;
+    height: 300px;
+    margin-left: 90px;
+    display: block;
+    background: url(../images/account.png)no-repeat;
+    padding: 5em 0;
+}
+
+.banner-thanks {
+    text-align: center;
+    width: 90%;
+    height: 250px;
+    margin-left: 90px;
+    display: block;
+    background: url(../images/thanks.png)no-repeat;
+    padding: 5em 0;
+}
+
+.banner-login_delivery {
+    text-align: center;
+    width: 90%;
+    height: 300px;
+    margin-left: 90px;
+    display: block;
+    background: url(../images/login_delivery.png)no-repeat;
     padding: 5em 0;
 }
 

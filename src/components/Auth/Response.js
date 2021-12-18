@@ -61,3 +61,4 @@ export async function addClient(city, distr, address, human) {
         });
     return response;
 }
+

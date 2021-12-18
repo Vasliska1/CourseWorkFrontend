@@ -24,7 +24,7 @@
             <div class="col-md-5 grid">
               <div class="flexslider">
                 <ul class="slides">
-                  <div><img src="../../assets/images/попит1.jpg" data-imagezoom="true"
+                  <div><img :src="require('@/assets/images/' + this.count[this.bestpop].image)" data-imagezoom="true"
                             class="thumb-image img-responsive"></div>
                 </ul>
               </div>
@@ -32,14 +32,14 @@
             <div class="col-md-7 single-top-in">
               <div class="span_2_of_a1 simpleCart_shelfItem">
                 <h3>По нашей статистике вам лучше всего подойдет этот антистресс</h3>
-                <p class="in-para">{{count[bestpop].stress}}</p>
-                <h4 class="quick">{{count[bestpop].title}}</h4>
+                <p class="in-para">{{this.count[this.bestpop].stress}}</p>
+                <h4 class="quick">{{this.count[this.bestpop].title}}</h4>
                 <div class="quantity">
                   <div class="quantity-select">
                     <div class="img ">
-                      <button @click="decrement(bestpop)"><img src="../../assets/images/minus.png" alt=""></button>
-                      <span> {{ count[bestpop].count}} </span>
-                      <button @click="increment(bestpop)"><img src="../../assets/images/plus.png" alt=""></button>
+                      <button @click="decrement(this.bestpop)"><img src="../../assets/images/minus.png" alt=""></button>
+                      <span> {{ this.count[this.bestpop].count}} </span>
+                      <button @click="increment(this.bestpop)"><img src="../../assets/images/plus.png" alt=""></button>
                     </div>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ import HeaderMain from "./HeaderMain";
 import Foother from "@/components/Foother";
 
 import Store from '../../vuex/store.js'
-//import {getBestPopit} from "Response";
+import {getBestPopit} from "./Response";
 
 export default {
   name: "Catalog",
@@ -300,7 +300,7 @@ export default {
     return {
       count: JSON.parse(localStorage.getItem('basket')),
       store: Store,
-      bestpop: 0
+      bestpop: 1
     }
   },
   components: {HeaderMain, Foother},
@@ -315,19 +315,20 @@ export default {
       this.count = JSON.parse(localStorage.getItem('basket'));
     },
     getBestPopit: function (){
-      this.bestpop = 1/*.then((response) => {
+      getBestPopit().then((response) => {
         if (response.ok) {
           response.text().then(text => {
             this.bestpop =text+1
           });
         }
-      })*/
+      })
 
     }
 
 
   },mounted() {
 
+this.count = JSON.parse(localStorage.getItem('basket'))
     console.log(Store.state)
     this.getBestPopit();
   }
