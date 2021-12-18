@@ -1,4 +1,8 @@
-# db_front
+# Course work ISBD frontend
+
+## Vue.js
+
+### Внимание, смотреть этот код опасно для жизни - не совершайте ошибку
 
 ## Project setup
 ```
